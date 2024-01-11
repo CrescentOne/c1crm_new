@@ -2,7 +2,12 @@
     "name": "HubspotToFreshdesk",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "freshdesk-node-red-contrib": "0.8.2",
+        "node-red-contrib-excel": "0.0.3",
+        "node-red-contrib-hubspot": "0.8.4",
+        "node-red-contrib-oracledb-mod": "0.6.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "intergration.json",
