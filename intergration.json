@@ -1,0 +1,4895 @@
+[
+    {
+        "id": "57cd36b36770224b",
+        "type": "tab",
+        "label": "Contact CRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fcd3b10f5c08f9ab",
+        "type": "tab",
+        "label": "Detect Changes",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8c716b96d53fcc12",
+        "type": "tab",
+        "label": "Company CRUD",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0aa10ba13c9e880e",
+        "type": "tab",
+        "label": "Write out data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7184ca1117723035",
+        "type": "subflow",
+        "name": "Get all CRM Contacts",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 220,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "b9c7556728ee50ad"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 620,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "8bb68a6eb14cf0a1",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "092a7fe5625209ad",
+        "type": "subflow",
+        "name": "Get All CRM Company C1DebIDs",
+        "info": "Get all the CRM C1DebIDs (DUNS) and return them in `msg.crmCompanyC1DebIds`",
+        "category": "",
+        "in": [
+            {
+                "x": 360,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "553cc69be195d0a0"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 760,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "3bc86958b8ff3cdb",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "b51a3f837d8a3ea1",
+        "type": "subflow",
+        "name": "Create CRM Company",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 480,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "8402cc0a77368d1d"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 880,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "01679e43e4a01a8e",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "2dfd8b2d52f7af9a",
+        "type": "subflow",
+        "name": "Update CRM Company",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 480,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "a54ae70a98acd1d1"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 880,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "bc595d65f754a7e1",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "8e5c40e166bd4df0",
+        "type": "subflow",
+        "name": "Create CRM Contact",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 540,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "2f7cbe3790def286"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 940,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "c8a32f98fc9d568b",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "7e11e6064d9c7cb0",
+        "type": "subflow",
+        "name": "Update CRM Contact",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 640,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "116759c19a529c64"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1040,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "cb4241c3abae18c7",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "2a67f265a2e6237e",
+        "type": "group",
+        "z": "57cd36b36770224b",
+        "name": "Create/Update Hubspot Contact in Freshdesk",
+        "style": {
+            "label": true,
+            "stroke": "#2CC373",
+            "fill": "#2CC373",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "05ece155e51e6f9d",
+            "b49c8f96aad76851",
+            "67b7ca5cba058b35",
+            "ce174f98ed4f6dfa",
+            "29b933ad61e88801",
+            "7a165d17493bec17",
+            "fb7f31258763d7b2",
+            "16d5407198b07db4",
+            "1b4f047f9015d3c3",
+            "7e6f1c47c71f6fda",
+            "d2238a6054af6986",
+            "1f5979d3bb408bec"
+        ],
+        "x": 194,
+        "y": 199,
+        "w": 1492,
+        "h": 162
+    },
+    {
+        "id": "4a1e6759b1cc7eb1",
+        "type": "group",
+        "z": "0aa10ba13c9e880e",
+        "name": "Get all FreshDesk Contacts and Companies and write them out to a exel file",
+        "style": {
+            "label": true,
+            "stroke": "#2CC373",
+            "fill": "#2CC373",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "2612fc17f0e766d0",
+            "576afb9528e58767",
+            "6dc23d6ecd395538",
+            "7b10b89e8cb23bde",
+            "e3e618aed6162578",
+            "b20a2d0ba32aef8f"
+        ],
+        "x": 194,
+        "y": 339
+    },
+    {
+        "id": "d4a00619d87fc08a",
+        "type": "group",
+        "z": "0aa10ba13c9e880e",
+        "name": "Get all HubSpot Contacts and Companies and write them out to a exel file",
+        "style": {
+            "label": true,
+            "stroke": "#ff7a59",
+            "fill": "#ff7a59",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "b13c54c470b5ea75",
+            "9add5abd4b6bc78c",
+            "10cf1e5e4243ea7f",
+            "b7e92c41e76cb185",
+            "02208acc61451184",
+            "502848c4387bf76a",
+            "c1b55578460eef5a",
+            "624a16c3af02081e"
+        ],
+        "x": 194,
+        "y": 519
+    },
+    {
+        "id": "3a2cea1e48cb42ae",
+        "type": "group",
+        "z": "fcd3b10f5c08f9ab",
+        "name": "Detect last changed contact",
+        "style": {
+            "label": true,
+            "stroke": "#6f2fa0"
+        },
+        "nodes": [
+            "dfb2a00df683c58e",
+            "026104ab77d82b9d",
+            "69ecd31a3b40ddfc",
+            "d4bad39bb50506cf",
+            "329dee5b76c08605",
+            "21f5a87b411fadda",
+            "9bdd032e44d5da67",
+            "470a0f29a5a2fd88",
+            "715c2890e1210bbd",
+            "fd89607a71e350a5",
+            "d5560f560083b928",
+            "1fc5a2db3b284360",
+            "e577c979e80331fe",
+            "b650cce502a2360f",
+            "2ea8e9a63cee97eb"
+        ],
+        "x": 174,
+        "y": 419,
+        "w": 1752,
+        "h": 142
+    },
+    {
+        "id": "ed922df1934e910c",
+        "type": "group",
+        "z": "8c716b96d53fcc12",
+        "name": "Check if FD company exists",
+        "style": {
+            "label": true,
+            "stroke": "#2CC373",
+            "fill": "#2CC373",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "ff9edf87fe5e2bf7",
+            "689b60b7e9f28b27",
+            "418e39387a0a9826",
+            "d9f2beadbb25894d",
+            "538540e02509be2b",
+            "23b91d4ad547dc15",
+            "671f38527755af06",
+            "c493d807830179fe",
+            "df83e9084238a982",
+            "63421acddd9b2f63",
+            "2054d3b91d7d9002",
+            "e06cbaa73c1e4f82",
+            "a19eb50b177544d1",
+            "6e3d086551e23a12",
+            "25d29953323a1465",
+            "75cdb3baea0b30fa",
+            "8e701183f8c2408b",
+            "8aee60c6c83d1d13",
+            "f62425b08e98134a",
+            "e13110d845ab92e6"
+        ],
+        "x": 184,
+        "y": 79
+    },
+    {
+        "id": "0e9d0bb5fd041acd",
+        "type": "group",
+        "z": "fcd3b10f5c08f9ab",
+        "name": "Check if FD contact exists",
+        "style": {
+            "label": true,
+            "stroke": "#2CC373",
+            "fill": "#2CC373",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "b67061694e218ada",
+            "2393829be15b230b",
+            "b162d2a08526c417",
+            "34185593191b210f",
+            "d8974d991ff92f43",
+            "45df12efb87d454b",
+            "627e7d49162ff70e",
+            "cf4a70987e060a11",
+            "29d9d4a990e22648",
+            "c1be076be9e6e22d"
+        ],
+        "x": 174,
+        "y": 759,
+        "w": 1482,
+        "h": 162
+    },
+    {
+        "id": "c15db5e3ece42e27",
+        "type": "group",
+        "z": "8c716b96d53fcc12",
+        "name": "Create/Update Freshdesk Company",
+        "style": {
+            "label": true,
+            "stroke": "#2CC373",
+            "fill": "#2CC373",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "d33fb76fff186265",
+            "2bf4746136a2da66",
+            "e2fa5e55e26099f2",
+            "aeae6682fe5aa621",
+            "97026bd929f579de",
+            "04cceb64d59c117b",
+            "48c27affb691b1ce",
+            "e33b8004192a07de",
+            "41f97b1479ae25c0",
+            "38154e8b9d77c14e",
+            "acb470b2afb0bd22",
+            "bddf7bdbfc616df8",
+            "ee9911909bcfb3bc",
+            "8fd01f8217dc3b2e",
+            "bec245d66186aeed",
+            "2ed92034ac44a287",
+            "73d2cd69422dcdaf",
+            "dfce0183cabddcad",
+            "100e213b8b079714",
+            "ccf2b6118e4bb4e9",
+            "e3b6db95c7ca4ad4",
+            "7a4d50c6388989fd",
+            "89e0c2b377b79678",
+            "7d776e71d6814f47"
+        ],
+        "x": 184,
+        "y": 319
+    },
+    {
+        "id": "c6e13c8b6262ebef",
+        "type": "group",
+        "z": "fcd3b10f5c08f9ab",
+        "name": "Detect last changed company",
+        "style": {
+            "label": true,
+            "stroke": "#6f2fa0"
+        },
+        "nodes": [
+            "e15e2ce35c6dd453",
+            "5359a08dc9a86270",
+            "45331e502f48629d",
+            "1330f66f0c826c8e",
+            "00152fa9ccf8570e",
+            "c872901c25b1a9a9",
+            "1dfda1712e88adb0",
+            "6cda659cbf856ae5",
+            "37867689e7248c83",
+            "8a190748682fa2a8",
+            "3da5661f5be4906f",
+            "c5381b275eb5cd94",
+            "f381d31175a397df"
+        ],
+        "x": 174,
+        "y": 579,
+        "w": 1882,
+        "h": 162
+    },
+    {
+        "id": "ccc91400f7d7db5e",
+        "type": "group",
+        "z": "8c716b96d53fcc12",
+        "name": "Check if CRM company exists",
+        "style": {
+            "label": true,
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "2caa18e2f8702b24",
+            "810afc600d13c504",
+            "382fbe5421645860",
+            "c35fb8316a703698",
+            "645a8cdf735bb776",
+            "b16718dcc1a03e03",
+            "48a3a25df1c09ae3"
+        ],
+        "x": 184,
+        "y": 599
+    },
+    {
+        "id": "ed91c2df0abfab3d",
+        "type": "group",
+        "z": "8c716b96d53fcc12",
+        "name": "Create/Update CRM Company",
+        "style": {
+            "label": true,
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "5a6cbef757d3bdc4",
+            "bcb0e01b1d1f0a55",
+            "9e2323ce4339e547",
+            "c251c2dcac3ac515",
+            "3e5d335ee2180c8e",
+            "d948bedcc253dc8c",
+            "be5dcd3cce5d2eb6",
+            "f1b57185a1125314",
+            "34244e495c8a9bc8",
+            "464f977f03eb9472",
+            "586d8a900c634dca",
+            "11d73a093de43f56",
+            "90454335dfebc5b7",
+            "203ee916ec153cb4"
+        ],
+        "x": 184,
+        "y": 799
+    },
+    {
+        "id": "86164ff46381846b",
+        "type": "group",
+        "z": "fcd3b10f5c08f9ab",
+        "name": "Check if CRM contact exists",
+        "style": {
+            "label": true,
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "ebb607ad30bbbff2",
+            "4650d32073a400f8",
+            "81de7715baef5f4f",
+            "a134d7084df4968b",
+            "54f47a5afd1432d5",
+            "6b3ee62b11a7304b",
+            "087b4da37ffaedcd",
+            "e0eb738162c2e485"
+        ],
+        "x": 174,
+        "y": 939,
+        "w": 1132,
+        "h": 162
+    },
+    {
+        "id": "ce16c2de205acd95",
+        "type": "group",
+        "z": "57cd36b36770224b",
+        "name": "Create CRM Contact",
+        "style": {
+            "label": true,
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "4bd86dcea58ceee1",
+            "abaaa43c9d0d1193",
+            "55b4b2b1dbc0ea4f",
+            "7a70d3f41dbaed28",
+            "a22204a966949720",
+            "9a9961ff2bca8b13",
+            "9808c5fe43a1f97a",
+            "29bac88b7203973d",
+            "c4f5b18bf7c173dc",
+            "d5a6e90f9e3c29d0",
+            "a73c72a2fd8b8121",
+            "2a5ea001687ef6be",
+            "8d42bca4e4480163",
+            "85a115ca24dd0a3a",
+            "0dda22e93c2a1a8c",
+            "39415845b5bcc4ae",
+            "ab7dadfeef234d4d"
+        ],
+        "x": 194,
+        "y": 379,
+        "w": 2192,
+        "h": 162
+    },
+    {
+        "id": "d121a343653de8c1",
+        "type": "group",
+        "z": "fcd3b10f5c08f9ab",
+        "name": "Start Stop integration",
+        "style": {
+            "stroke": "#ff0000",
+            "label": true,
+            "fill": "#ff0000",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "65b6609470d81866",
+            "1c2c9a03dd22d39c",
+            "7e43e72288f65f17",
+            "fb3cefae1205982f",
+            "659e215ca6b3e905",
+            "ebbbe69332452e65",
+            "d859d28236c9b8f6",
+            "8217ad32e4e36165",
+            "0fd7d8657cf1c203",
+            "06b50d082682ae93",
+            "5050b0d4e2f34a01",
+            "c1f67ec671b78d74",
+            "21411a1bfe632552",
+            "e09cd295d853401c",
+            "5dfa824bd5f7e692",
+            "e25df53fae078de5",
+            "392e72676495c5b7",
+            "84229d6066291f43",
+            "adc7ec1a811c53dd",
+            "29227183e71d090e",
+            "e14d5f2aa17ad3cb",
+            "0a319c8f3c5f1502",
+            "5fafc9fdd8e33337",
+            "265d9e853f7ce53b",
+            "d0288ce20af4c69b"
+        ],
+        "x": 174,
+        "y": 99,
+        "w": 2012,
+        "h": 282,
+        "info": "In this block we can start and stop the intergration with an HTTP request on the ip Node Red is running and the endpoints `/startintergration` and `/stopintergration`.\r\nThe interval between checks can be adjusted with the delay node.\r\nThough for some weird reason it always start one more time after you stop it.\r\nThis shouldnt even be possible but somehow it happens `¯\\_(ツ)_/¯`"
+    },
+    {
+        "id": "72e8fd61b865bd7b",
+        "type": "group",
+        "z": "0aa10ba13c9e880e",
+        "name": "Write out changes to a text file",
+        "style": {
+            "label": true,
+            "stroke": "#6f2fa0"
+        },
+        "nodes": [
+            "0d9372422364a524",
+            "aad89775255587d7",
+            "8c2c14f65839d360",
+            "47f6878f52bb62c7",
+            "e74939d75ffd3686"
+        ],
+        "x": 194,
+        "y": 179
+    },
+    {
+        "id": "f56817fd319a6405",
+        "type": "group",
+        "z": "0aa10ba13c9e880e",
+        "name": "(WIP, untested) Get all Glovia Contacts and Companies and write them out to a exel file",
+        "style": {
+            "label": true,
+            "stroke": "#7fb7df",
+            "fill": "#7fb7df",
+            "fill-opacity": "0.2"
+        },
+        "nodes": [
+            "e2f58d38a8d2f093",
+            "8417a35c9a6961ac",
+            "4a8eb7db4b52f8ab",
+            "3bf630ae8c761899",
+            "1fb452bdd5d7d65a",
+            "7f7db4124ef413e9"
+        ],
+        "x": 194,
+        "y": 699
+    },
+    {
+        "id": "9bb24773421480c1",
+        "type": "global-config",
+        "name": "global-config",
+        "env": [
+            {
+                "name": "userCompanyId",
+                "value": "",
+                "type": "env"
+            },
+            {
+                "name": "companyIds",
+                "value": "",
+                "type": "env"
+            }
+        ]
+    },
+    {
+        "id": "964a3f5b26114437",
+        "type": "hubspot-account",
+        "name": "Jonesy B inc",
+        "authMode": "access-token",
+        "apikey": "pat-eu1-dd727351-aa17-4b52-ab71-614f0cc22205",
+        "accessToken": "pat-eu1-dd727351-aa17-4b52-ab71-614f0cc22205",
+        "developerApiKey": "",
+        "clientId": "",
+        "clientSecret": "",
+        "refreshToken": "",
+        "retries": "",
+        "burstDuration": "",
+        "burstRequest": "",
+        "concurrent": ""
+    },
+    {
+        "id": "ac3c09c2d8c1db8e",
+        "type": "freshdeskCredentials",
+        "name": "Jonesy B inc",
+        "domain": "jonesybinc",
+        "apiKey": "d4EIO73WzFd5CuWsUR6Y"
+    },
+    {
+        "id": "f14ce7e441df5f92",
+        "type": "oracle-server",
+        "connectionname": "CrmG2Test",
+        "tnsname": "",
+        "connectiontype": "Classic",
+        "instantclientpath": "D:\\Oracle",
+        "host": "10.21.1.125",
+        "port": "1521",
+        "reconnect": true,
+        "reconnecttimeout": "5000",
+        "db": "crmTest"
+    },
+    {
+        "id": "8bb68a6eb14cf0a1",
+        "type": "oracledb",
+        "z": "7184ca1117723035",
+        "name": "",
+        "usequery": false,
+        "query": "",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.payload\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": "10000",
+        "x": 500,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9c7556728ee50ad",
+        "type": "function",
+        "z": "7184ca1117723035",
+        "name": "Set Query",
+        "func": "// Delete the msg.payload otherwise the querry doesnt\n// work for some awfull anoying reason i cant figure out\ndelete msg.payload;\n\nmsg.query = \"SELECT PRIMARY_EMAIL FROM CONTACTS WHERE PRIMARY_EMAIL != ' '\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "8bb68a6eb14cf0a1"
+            ]
+        ]
+    },
+    {
+        "id": "17eb41df7807d48a",
+        "type": "http in",
+        "z": "7184ca1117723035",
+        "name": "",
+        "url": "/getallcrmcontacts",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "89b9362fd2179720"
+            ]
+        ]
+    },
+    {
+        "id": "bd99b148a8488867",
+        "type": "oracledb",
+        "z": "7184ca1117723035",
+        "name": "",
+        "usequery": false,
+        "query": "",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.payload\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": "10000",
+        "x": 660,
+        "y": 240,
+        "wires": [
+            [
+                "7b954e7340ce5466"
+            ]
+        ]
+    },
+    {
+        "id": "89b9362fd2179720",
+        "type": "function",
+        "z": "7184ca1117723035",
+        "name": "Set Query",
+        "func": "// Delete the msg.payload otherwise the querry doesnt\n// work for some awfull anoying reason i cant figure out\ndelete msg.payload;\n\nmsg.query = \"SELECT PRIMARY_EMAIL FROM CONTACTS WHERE PRIMARY_EMAIL != ' '\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "bd99b148a8488867"
+            ]
+        ]
+    },
+    {
+        "id": "7b954e7340ce5466",
+        "type": "http response",
+        "z": "7184ca1117723035",
+        "name": "Send response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 840,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3bc86958b8ff3cdb",
+        "type": "oracledb",
+        "z": "092a7fe5625209ad",
+        "name": "",
+        "usequery": false,
+        "query": "",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.location\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": "10000",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "553cc69be195d0a0",
+        "type": "function",
+        "z": "092a7fe5625209ad",
+        "name": "Set Query",
+        "func": "// Delete the msg.payload otherwise the querry doesnt\n// work for some awfull anoying reason i cant figure out\ndelete msg.payload;\n\nmsg.query = \"SELECT DUNS FROM CUS_LOC WHERE DUNS != ' '\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "3bc86958b8ff3cdb"
+            ]
+        ]
+    },
+    {
+        "id": "f3bcd6acc5fad4fe",
+        "type": "http in",
+        "z": "092a7fe5625209ad",
+        "name": "",
+        "url": "/getallcompanyc1debids",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "edfb586c15cc3d79"
+            ]
+        ]
+    },
+    {
+        "id": "b459336eb1b421cd",
+        "type": "http response",
+        "z": "092a7fe5625209ad",
+        "name": "Send response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1020,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2aefad5cf1d0e7f8",
+        "type": "oracledb",
+        "z": "092a7fe5625209ad",
+        "name": "",
+        "usequery": false,
+        "query": "",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.location\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": "10000",
+        "x": 840,
+        "y": 420,
+        "wires": [
+            [
+                "b459336eb1b421cd"
+            ]
+        ]
+    },
+    {
+        "id": "edfb586c15cc3d79",
+        "type": "function",
+        "z": "092a7fe5625209ad",
+        "name": "Set Query",
+        "func": "// Delete the msg.payload otherwise the querry doesnt\n// work for some awfull anoying reason i cant figure out\ndelete msg.payload;\n\nmsg.query = \"SELECT DUNS FROM CUS_LOC WHERE DUNS != ' '\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 420,
+        "wires": [
+            [
+                "2aefad5cf1d0e7f8"
+            ]
+        ]
+    },
+    {
+        "id": "01679e43e4a01a8e",
+        "type": "oracledb",
+        "z": "b51a3f837d8a3ea1",
+        "name": "",
+        "usequery": false,
+        "query": "INSERT INTO oracleTableName\n\t(fieldName1, fieldName2, Fieldname3)\n\tVALUES (\n\t\t:valueOfValuesArrayIndex0,\n\t\t:valueOfValuesArrayIndex1,\n\t\t:valueOfValuesArrayIndex2,\n\t)",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.payload\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": 100,
+        "x": 760,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8402cc0a77368d1d",
+        "type": "function",
+        "z": "b51a3f837d8a3ea1",
+        "name": "Set SQL",
+        "func": "msg.query = \"BEGIN CREATE_CUSTOMER(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12, :13, :14, :15, :16, :17, :18, :19, :20, :21, :22, :23, :24, :25, :26, :27, :28, :29, :30); END;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "01679e43e4a01a8e"
+            ]
+        ]
+    },
+    {
+        "id": "bc595d65f754a7e1",
+        "type": "oracledb",
+        "z": "2dfd8b2d52f7af9a",
+        "name": "",
+        "usequery": false,
+        "query": "",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.payload\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": 100,
+        "x": 760,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a54ae70a98acd1d1",
+        "type": "function",
+        "z": "2dfd8b2d52f7af9a",
+        "name": "Set SQL",
+        "func": "msg.query = \"BEGIN UPDATE_CUSTOMER(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12, :13, :14, :15, :16, :17, :18, :19, :20, :21, :22, :23, :24, :25, :26, :27, :28, :29, :30); END;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "bc595d65f754a7e1"
+            ]
+        ]
+    },
+    {
+        "id": "c8a32f98fc9d568b",
+        "type": "oracledb",
+        "z": "8e5c40e166bd4df0",
+        "name": "",
+        "usequery": false,
+        "query": "INSERT INTO oracleTableName\n\t(fieldName1, fieldName2, Fieldname3)\n\tVALUES (\n\t\t:valueOfValuesArrayIndex0,\n\t\t:valueOfValuesArrayIndex1,\n\t\t:valueOfValuesArrayIndex2,\n\t)",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.payload\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": 100,
+        "x": 820,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f7cbe3790def286",
+        "type": "function",
+        "z": "8e5c40e166bd4df0",
+        "name": "Set SQL",
+        "func": "msg.query = \"BEGIN CREATE_CONTACT(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12, :13, :14, :15, :16, :17, :18, :19, :20, :21, :22, :23, :24, :25, :26, :27, :28, :29, :30, :31, :32, :33, :34, :35, :36, :37, :38, :39, :40, :41, :42, :43, :44, :45, :46, :47, :48, :49, :50, :51, :52, :53, :54, :55, :56, :57, :58, :59, :60, :61, :62, :63, :64, :65); END;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [
+                "c8a32f98fc9d568b"
+            ]
+        ]
+    },
+    {
+        "id": "cb4241c3abae18c7",
+        "type": "oracledb",
+        "z": "7e11e6064d9c7cb0",
+        "name": "",
+        "usequery": false,
+        "query": "INSERT INTO oracleTableName\n\t(fieldName1, fieldName2, Fieldname3)\n\tVALUES (\n\t\t:valueOfValuesArrayIndex0,\n\t\t:valueOfValuesArrayIndex1,\n\t\t:valueOfValuesArrayIndex2,\n\t)",
+        "usemappings": false,
+        "mappings": "[\n\t\"location.of.first.array.index.field.in.msg.payload\",\n\t\"location.of.second.array.index.field\",\n\t\"last_array_indexfield.in[3]\"\n]",
+        "server": "f14ce7e441df5f92",
+        "resultaction": "single",
+        "resultlimit": 100,
+        "x": 920,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "116759c19a529c64",
+        "type": "function",
+        "z": "7e11e6064d9c7cb0",
+        "name": "Set SQL",
+        "func": "msg.query = \"BEGIN UPDATE_CONTACT(:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11, :12, :13, :14, :15, :16, :17, :18, :19, :20, :21, :22, :23, :24, :25, :26, :27, :28, :29, :30, :31, :32, :33, :34, :35, :36, :37, :38, :39, :40, :41, :42, :43, :44, :45, :46, :47, :48, :49, :50, :51, :52, :53, :54, :55, :56, :57, :58, :59, :60, :61, :62, :63, :64, :65); END;\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 380,
+        "wires": [
+            [
+                "cb4241c3abae18c7"
+            ]
+        ]
+    },
+    {
+        "id": "05ece155e51e6f9d",
+        "type": "debug",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Print Freshdesk response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b49c8f96aad76851",
+        "type": "debug",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Print converted results",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "67b7ca5cba058b35",
+        "type": "freshdesk-create-contact",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "inputData": "payload",
+        "x": 1210,
+        "y": 280,
+        "wires": [
+            [
+                "05ece155e51e6f9d",
+                "1f5979d3bb408bec"
+            ]
+        ]
+    },
+    {
+        "id": "7a165d17493bec17",
+        "type": "freshdesk-update-contact-by-id",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "contactId": "id",
+        "inputData": "payload",
+        "x": 1230,
+        "y": 320,
+        "wires": [
+            [
+                "05ece155e51e6f9d",
+                "7e6f1c47c71f6fda"
+            ]
+        ]
+    },
+    {
+        "id": "ce174f98ed4f6dfa",
+        "type": "comment",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Check if company exists",
+        "info": "This link out goes to some code that checks if the\ncompany of the contact beign created/updated already exists in Freshdesk.\nIf not the company will be created and the contact will be created\nwith the company linked. \nIf the company does exist the new contact will have that company linked",
+        "x": 330,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "29b933ad61e88801",
+        "type": "link in",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Recieve proceed contact creation",
+        "links": [
+            "63421acddd9b2f63",
+            "59bb92c59ee40733"
+        ],
+        "x": 455,
+        "y": 300,
+        "wires": [
+            [
+                "16d5407198b07db4"
+            ]
+        ]
+    },
+    {
+        "id": "fb7f31258763d7b2",
+        "type": "switch",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Operation",
+        "property": "contactOperation",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "create",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [
+                "67b7ca5cba058b35"
+            ],
+            [
+                "1b4f047f9015d3c3"
+            ]
+        ]
+    },
+    {
+        "id": "16d5407198b07db4",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Data Converter",
+        "func": "// In this function we prepare the data for contact creation in Freshdesk\n\n// Get the HubSpot data back we got at the start\nvar inputJson = global.get(\"HScontactData\");\n\n// Prepare the payload to create the FD contact with the data from HubSpot \nconst payload = {\n    \"name\": `${inputJson.properties.firstname} ${inputJson.properties.lastname}`,\n    \"email\": inputJson.properties.email,\n};\n\n// Add 'company_id' to payload if 'companyExists' is true\n// When the created HubSpot contact doesnt have a company it wont be linked yet.\n// If it does have a company it will be added to the Freshdesk contact.\nnode.warn(global.get(\"companyExists\"));\nif (global.get(\"companyExists\")) \n{\n    payload.company_id = global.get(\"currentCompanyId\");\n}\n\n\n/// Extra properties\n\n// Add phone if it exists\nif(inputJson.properties.hasOwnProperty(\"phone\"))\n{\n    payload.phone = inputJson.properties.phone;\n}\nmsg.payload = payload;\n\n// Send the message\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 300,
+        "wires": [
+            [
+                "b49c8f96aad76851",
+                "fb7f31258763d7b2"
+            ]
+        ],
+        "info": "In this function we prepare the data for contact creation in Freshdesk"
+    },
+    {
+        "id": "4bd86dcea58ceee1",
+        "type": "link in",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Recieve Create CRM Contact",
+        "links": [
+            "e0eb738162c2e485"
+        ],
+        "x": 235,
+        "y": 460,
+        "wires": [
+            [
+                "9a9961ff2bca8b13"
+            ]
+        ]
+    },
+    {
+        "id": "abaaa43c9d0d1193",
+        "type": "switch",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Exists?",
+        "property": "exists",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1560,
+        "y": 480,
+        "wires": [
+            [
+                "7a70d3f41dbaed28"
+            ],
+            [
+                "55b4b2b1dbc0ea4f"
+            ]
+        ]
+    },
+    {
+        "id": "55b4b2b1dbc0ea4f",
+        "type": "subflow:8e5c40e166bd4df0",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "",
+        "x": 1760,
+        "y": 500,
+        "wires": [
+            [
+                "85a115ca24dd0a3a"
+            ]
+        ]
+    },
+    {
+        "id": "7a70d3f41dbaed28",
+        "type": "subflow:7e11e6064d9c7cb0",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "",
+        "x": 1760,
+        "y": 460,
+        "wires": [
+            [
+                "8d42bca4e4480163"
+            ]
+        ]
+    },
+    {
+        "id": "a22204a966949720",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Data Converter",
+        "func": "// In this function we prepare the data for a company creation\n// with the data we got from Hubspot and the company data we got.\n\n// Store the data we got from HubSpot\nconst inputJson = global.get(\"HScontactData\").properties;\n\n// Below here we set most of the variables\n// First we check if the field exists and fill it in if so\n// If the field doesnt exists we set it to ' '\n\n// Set first name\nconst firstName = inputJson.hasOwnProperty(\"firstname\") ? inputJson.firstname : ' ';\n\n// Here we get the last name from the HS data and split it up in the middle and last name if needed.\nconst lastName = inputJson.lastname.trim();\nconst lastNameWords = lastName.split(' ');\n\n// Extract last name\nconst lastNameFormatted = lastNameWords.pop() || '';\n\n// Join remaining words as middle name(s)\nconst middleNameFormatted = lastNameWords.join(' ');\n\n// Other fields\nconst jobTitle = inputJson.hasOwnProperty(\"jobtitle\") ? inputJson.jobtitle : ' ';\nconst phone = inputJson.hasOwnProperty(\"phone\")       ? inputJson.phone    : ' ';\nconst email = inputJson.hasOwnProperty(\"email\")       ? inputJson.email    : ' ';\n// Store email so we can use it for logging\nflow.set(\"emailFromContact\", email);\n// Get the current date and time in the required format (DD-MON-YY)\nconst currentDate = new Date();\nconst months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];\nconst formattedDate = `${currentDate.getDate()}-${months[currentDate.getMonth()]}-${currentDate.getFullYear().toString().slice(-2)}`;\n\n// Set all the values an array in msg.payload. these will be the values that will be passed with the sql query\nmsg.payload = [\n// VALUE                        COLUMN IN DB            COUNT\n  ' ',                          // CONTACT_ID,            // 1\n  ' ',                          // SOURCE,                // 2\n  ' ',                          // TITLE,                 // 3\n  firstName,                    // FIRST_NAME,            // 4\n  lastNameFormatted,            // LAST_NAME,             // 5\n  middleNameFormatted,          // MIDDLE_NAME,           // 6\n  msg.companyName,              // COMPANY_NAME,          // 7\n  msg.companyUrl,               // COMPANY_URL,           // 8\n  jobTitle,                     // JOB_TITLE,             // 9\n  ' ',                          // DISPLAY_NAME,          // 10\n  phone,                        // BUS_PHONE1,            // 11\n  ' ',                          // BUS_PHONE2,            // 12\n  ' ',                          // BUS_PHONE3,            // 13\n  msg.address,                  // BUS_STREET,            // 14\n  ' ',                          // BUS_CITY,              // 15\n  msg.state,                    // BUS_STATE,             // 16\n  msg.companyCnrty,             // BUS_CNTRY,             // 17\n  ' ',                          // BUS_POSTAL_CODE,       // 18\n  email,                        // PRIMARY_EMAIL,         // 19\n  ' ',                          // ALTERNATE_EMAIL,       // 20\n  ' ',                          // OTHER_EMAIL,           // 21\n  ' ',                          // CELL_PHONE1,           // 22\n  ' ',                          // CELL_PHONE2,           // 23\n  ' ',                          // PRIMARY_FAX,           // 24\n  ' ',                          // ALTERNATE_FAX,         // 25\n  ' ',                          // HOME_PHONE1,           // 26\n  ' ',                          // HOME_PHONE2,           // 27\n  ' ',                          // HOME_CNTRY,            // 28\n  ' ',                          // HOME_STATE,            // 29\n  ' ',                          // HOME_CITY,             // 30\n  ' ',                          // HOME_POSTAL_CODE,      // 31\n  ' ',                          // HOME_STREET,           // 32\n  ' ',                          // OTHER_CNTRY,           // 33\n  ' ',                          // OTHER_STATE,           // 34\n  ' ',                          // OTHER_CITY,            // 35\n  ' ',                          // OTHER_POSTAL_CODE,     // 36\n  ' ',                          // OTHER_STREET,          // 37\n  ' ',                          // UNIQUE_ID,             // 38\n  formattedDate,                // LAST_UPDATED_DATE,     // 39\n  ' ',                          // LAST_UPDATED_TIME,     // 40\n  ' ',                          // INACTIVE,              // 41\n  ' ',                          // TELEX,                 // 42\n  ' ',                          // DETAILS,               // 43\n  ' ',                          // SOCIAL_TYPE1,          // 44\n  ' ',                          // SOCIAL_ID1,            // 45\n  ' ',                          // SOCIAL_TYPE2,          // 46\n  ' ',                          // SOCIAL_ID2,            // 47\n  ' ',                          // SOCIAL_TYPE3,          // 48\n  ' ',                          // SOCIAL_ID3,            // 49\n  ' ',                          // USER1,                 // 50\n  ' ',                          // USER2,                 // 51\n  ' ',                          // USER3,                 // 52\n  ' ',                          // USER4,                 // 53\n  ' ',                          // EMAIL_NOTIFICATION,    // 54\n  ' ',                          // CTYPE_ID,              // 55\n  ' ',                          // CAT_ID1,               // 56\n  ' ',                          // CAT_ID2,               // 57\n  ' ',                          // CAT_ID3,               // 58\n  ' ',                          // USER_ALPHA1,           // 59\n  ' ',                          // USER_ALPHA2,           // 60\n  ' ',                          // USER_ALPHA3,           // 61\n  0,                            // USER_NUM1,             // 62\n  0,                            // USER_NUM2,             // 63\n  0,                            // USER_NUM3,             // 64\n  ' '                           // USER_TIME              // 65\n];\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 480,
+        "wires": [
+            [
+                "2a5ea001687ef6be",
+                "abaaa43c9d0d1193"
+            ]
+        ]
+    },
+    {
+        "id": "9a9961ff2bca8b13",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Check if HS contact has a company",
+        "func": "/// Check if msg.payload has the 'associations' property of Hubspot \n\n// Default it to false\nmsg.checkCompany = false;\n\nif (global.get(\"HScontactData\").hasOwnProperty(\"associations\")) \n{\n    // Set 'currentCompanyId' if the 'associations' property exists\n    msg.checkCompany = true;\n    msg.id = global.get(\"HScontactData\").associations.companies.results[0].id;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "9808c5fe43a1f97a"
+            ]
+        ],
+        "info": "Here we check if the changed contact has a compant associated.\r\nIf so we need to get some information from the assiciated company.\r\nIf not we set those values to ' '"
+    },
+    {
+        "id": "9808c5fe43a1f97a",
+        "type": "switch",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Has Company?",
+        "property": "checkCompany",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "29bac88b7203973d"
+            ],
+            [
+                "d5a6e90f9e3c29d0"
+            ]
+        ]
+    },
+    {
+        "id": "29bac88b7203973d",
+        "type": "hubspot-company-get-by-id",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "account": "964a3f5b26114437",
+        "name": "Get HS Company by id",
+        "inputId": "id",
+        "associations": "",
+        "properties": "name, country, city, state, address",
+        "output": "payload",
+        "x": 920,
+        "y": 440,
+        "wires": [
+            [
+                "c4f5b18bf7c173dc"
+            ]
+        ]
+    },
+    {
+        "id": "c4f5b18bf7c173dc",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Store Company Info ",
+        "func": "//Store data so we dont have to get the full path everytime\nconst inputData = msg.payload.properties;\n\n// Store the needed data from the company if it exists\nmsg.state        = inputData.hasOwnProperty(\"state\")   ? inputData.state   : ' ';\nmsg.companyUrl   = inputData.hasOwnProperty(\"domain\")  ? inputData.domain  : ' ';\nmsg.companyName  = inputData.hasOwnProperty(\"name\")    ? inputData.name    : ' ';\nmsg.companyCnrty = inputData.hasOwnProperty(\"country\") ? inputData.country : ' ';\nmsg.address      = inputData.hasOwnProperty(\"address\") ? inputData.address : ' ';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 440,
+        "wires": [
+            [
+                "a22204a966949720"
+            ]
+        ],
+        "info": "Here we store the company data of the assiciated contact needed for the contact creation."
+    },
+    {
+        "id": "d5a6e90f9e3c29d0",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Set blank data",
+        "func": "// Set to blank since we dont have a company\nmsg.companyName  = ' ';\nmsg.companyUrl   = ' ';\nmsg.state        = ' ';\nmsg.companyCnrty = ' ';\nmsg.address      = ' ';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 480,
+        "wires": [
+            [
+                "a22204a966949720"
+            ]
+        ],
+        "info": "This function is called when there is no associated company found in the contact.\r\nSo it will set some fields to blank"
+    },
+    {
+        "id": "a73c72a2fd8b8121",
+        "type": "inject",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Manual get company",
+        "props": [
+            {
+                "p": "id",
+                "v": "9106399710",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 660,
+        "y": 420,
+        "wires": [
+            [
+                "29bac88b7203973d"
+            ]
+        ]
+    },
+    {
+        "id": "2a5ea001687ef6be",
+        "type": "debug",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Print converted results",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8d42bca4e4480163",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Set debug message",
+        "func": "node.warn(\"Updated contact in Glovia Database\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 460,
+        "wires": [
+            [
+                "0dda22e93c2a1a8c"
+            ]
+        ]
+    },
+    {
+        "id": "85a115ca24dd0a3a",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Set debug message",
+        "func": "node.warn(\"Created contact in Glovia Database\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 500,
+        "wires": [
+            [
+                "39415845b5bcc4ae"
+            ]
+        ]
+    },
+    {
+        "id": "1b4f047f9015d3c3",
+        "type": "change",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Set contact ID for update",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "fdContactToUpdate",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 320,
+        "wires": [
+            [
+                "7a165d17493bec17"
+            ]
+        ]
+    },
+    {
+        "id": "7e6f1c47c71f6fda",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Set log details",
+        "func": "msg.operation = \"Updated\";\nmsg.crm = \"FreshDesk\"\nmsg.object = \"contact\"\nmsg.id = msg.payload.company_id;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 320,
+        "wires": [
+            [
+                "d2238a6054af6986"
+            ]
+        ]
+    },
+    {
+        "id": "d2238a6054af6986",
+        "type": "link out",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Send write out changes",
+        "mode": "link",
+        "links": [
+            "47f6878f52bb62c7"
+        ],
+        "x": 1635,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1f5979d3bb408bec",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "2a67f265a2e6237e",
+        "name": "Set log details",
+        "func": "msg.operation = \"Created\";\nmsg.crm = \"FreshDesk\"\nmsg.object = \"contact\"\nmsg.id = msg.payload.company_id;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 280,
+        "wires": [
+            [
+                "d2238a6054af6986"
+            ]
+        ]
+    },
+    {
+        "id": "0dda22e93c2a1a8c",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Set log details",
+        "func": "msg.operation = \"Updated\";\nmsg.crm = \"Glovia\";\nmsg.object = \"contact\";\nmsg.id = flow.get(\"emailFromContact\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2220,
+        "y": 460,
+        "wires": [
+            [
+                "ab7dadfeef234d4d"
+            ]
+        ]
+    },
+    {
+        "id": "39415845b5bcc4ae",
+        "type": "function",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Set log details",
+        "func": "msg.operation = \"Updated\";\nmsg.crm = \"Glovia\"\nmsg.object = \"contact\"\nmsg.id = flow.get(\"emailFromContact\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2220,
+        "y": 500,
+        "wires": [
+            [
+                "ab7dadfeef234d4d"
+            ]
+        ]
+    },
+    {
+        "id": "ab7dadfeef234d4d",
+        "type": "link out",
+        "z": "57cd36b36770224b",
+        "g": "ce16c2de205acd95",
+        "name": "Send wirte out changes 3",
+        "mode": "link",
+        "links": [
+            "47f6878f52bb62c7"
+        ],
+        "x": 2345,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dfb2a00df683c58e",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Manual Trigger ",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "026104ab77d82b9d"
+            ]
+        ],
+        "info": "Manually trigger the detection of the last changed Hubspot contact."
+    },
+    {
+        "id": "026104ab77d82b9d",
+        "type": "hubspot-api-request",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "account": "964a3f5b26114437",
+        "method": "GET",
+        "path": "/contacts/v1/lists/recently_updated/contacts/recent?count=1",
+        "body": "nothing",
+        "output": "payload",
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "69ecd31a3b40ddfc",
+                "b650cce502a2360f"
+            ]
+        ]
+    },
+    {
+        "id": "69ecd31a3b40ddfc",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Print last changed contact",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d4bad39bb50506cf",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Send Check if FreshDesk contact exists",
+        "mode": "link",
+        "links": [
+            "b67061694e218ada"
+        ],
+        "x": 1885,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b67061694e218ada",
+        "type": "link in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Recieve Check if FreshDesk contact exists",
+        "links": [
+            "d4bad39bb50506cf"
+        ],
+        "x": 355,
+        "y": 840,
+        "wires": [
+            [
+                "d8974d991ff92f43"
+            ]
+        ]
+    },
+    {
+        "id": "2393829be15b230b",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Store all current FD contact emails with ID",
+        "func": "// In this function we store all the Freshdesk contact names with a ID\n// In a 2D array \"[[email], [id]], [[email], [id]]\"\n\n// Store the company data we got from the previous node\nconst contacts = msg.payload;\n\n//Initialise an empty array\nmsg.fdContactEmailsIDs = msg.fdContactEmailsIDs || [];\n\n// Loop over all the contacts we got and store the name and ID in the array\ncontacts.forEach(function(element) \n{\n    msg.fdContactEmailsIDs.push([element.email, element.id]);\n});\n\nmsg.currentHSContactId = global.get(\"currentHSContactId\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 840,
+        "wires": [
+            [
+                "34185593191b210f",
+                "b162d2a08526c417"
+            ]
+        ],
+        "info": "In this function we store all the Freshdesk contact names with a ID\r\nIn a 2D array \"[[email], [id]], [[email], [id]]\""
+    },
+    {
+        "id": "b162d2a08526c417",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Check if contact exists in FD",
+        "func": "// In this function we check if the Hubspot contact exist in Freshdesk. \n// If it does we will update the freshdesk contact with the updated data,\n// if it doesn't we create a new contact\nconst currentHSContact = global.get(\"HScontactData\").properties.email;\n\n// Default the operation to create since that is what we need\n// when no match is found\nglobal.set(\"contactOperation\", \"create\");\n//msg.exists = false;\n\n// Loop over all the FD contacts\nfor (let i = 0; i < msg.fdContactEmailsIDs.length; i++) \n{\n    // Temp store the name\n    const currentFDcontact = msg.fdContactEmailsIDs[i][0];\n\n    // Check if the contact is the same as the Hubspot \n    // contact we got from the latest changed contact\n    if (currentFDcontact == currentHSContact)\n    {\n        // Store ID of the Freshdesk contact that we need to update\n        global.set(\"fdContactToUpdate\", msg.fdContactEmailsIDs[i][1]);\n        global.set(\"contactOperation\", \"update\");\n    }\n}\n\n//node.warn(global.get(\"contactOperation\"));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 840,
+        "wires": [
+            [
+                "29d9d4a990e22648"
+            ]
+        ],
+        "info": "In this function we check if the Hubspot contact exist in Freshdesk. \r\nIf it does we will update the freshdesk contact with the updated data,\r\nif it doesn't we create a new contact"
+    },
+    {
+        "id": "34185593191b210f",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Print formatted FS emails with ID",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "fdContactEmailsIDs",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "d8974d991ff92f43",
+        "type": "freshdesk-get-contact-by-id",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Get All Freshdesk Contacts",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "contactId": "idghj",
+        "x": 520,
+        "y": 840,
+        "wires": [
+            [
+                "2393829be15b230b"
+            ]
+        ]
+    },
+    {
+        "id": "d5560f560083b928",
+        "type": "json",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1035,
+        "y": 460,
+        "wires": [
+            [
+                "1fc5a2db3b284360"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "1fc5a2db3b284360",
+        "type": "json",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1085,
+        "y": 460,
+        "wires": [
+            [
+                "e577c979e80331fe"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e577c979e80331fe",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Print recieved HS contact",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "45df12efb87d454b",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Send Check For New Company",
+        "mode": "link",
+        "links": [
+            "689b60b7e9f28b27"
+        ],
+        "x": 1615,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "627e7d49162ff70e",
+        "type": "comment",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Check if company exists",
+        "info": "This link out goes to some code that checks if the\ncompany of the contact beign created/updated already exists in Freshdesk.\nIf not the company will be created and the contact will be created\nwith the company linked. \nIf the company does exist the new contact will have that company linked",
+        "x": 1410,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "cf4a70987e060a11",
+        "type": "comment",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Documentation",
+        "info": "In this function we compare the recieved\ncontact from Hubspot to a list of all the\nFreshdesk users using the email as\nindentifier. If the contact does exist\nwe set the global variable \"contactOperation\"\nto update. If the contact doesn't exists we \nset it to create.",
+        "x": 480,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "329dee5b76c08605",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Check When Contact Was Modified",
+        "func": "// Get the time that the contact was modified (unix)\nvar hsContactData = global.get(\"HScontactData\");\n\n// Get the value of time-offset\nvar inputTime = new Date(hsContactData.properties.lastmodifieddate).getTime();\n\n//node.warn(\"Input Time: \" + inputTime);\n\n// Get the current Unix time in milliseconds\nvar currentUnixTime = new Date().getTime();\n//node.warn(\"Current Unix Time: \" + currentUnixTime);\n\n// Define the time threshold for 1 minutes in milliseconds\nvar timeThreshold = 1 * 10 * 1000;\n\n// Check if the input time is within the threshold\nmsg.isWithinTime = (currentUnixTime - inputTime) <= timeThreshold;\n\n// Print out of change was within 1 minute or not\n//node.warn(msg.isWithinTime ? \"Within 1 minute\" : \"Not within 1 minute\");\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 500,
+        "wires": [
+            [
+                "21f5a87b411fadda"
+            ]
+        ],
+        "info": "This function checks if the change happened in the past minute,\r\nif not, the flow is cancled to save on usleess api calls.\r\nWhile this is not perfect and changes will most likely be\r\ndone multible times it does help a lot."
+    },
+    {
+        "id": "21f5a87b411fadda",
+        "type": "switch",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Happened past 10 sec?",
+        "property": "isWithinTime",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1710,
+        "y": 500,
+        "wires": [
+            [
+                "9bdd032e44d5da67",
+                "d4bad39bb50506cf"
+            ]
+        ]
+    },
+    {
+        "id": "e15e2ce35c6dd453",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Manual Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 300,
+        "y": 620,
+        "wires": [
+            [
+                "5359a08dc9a86270"
+            ]
+        ],
+        "info": "Manually trigger the detection of the last changed Hubspot company."
+    },
+    {
+        "id": "5359a08dc9a86270",
+        "type": "hubspot-api-request",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "account": "964a3f5b26114437",
+        "method": "GET",
+        "path": "/companies/v2/companies/recent/modified?count=1",
+        "body": "nothing",
+        "output": "payload",
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "45331e502f48629d",
+                "8a190748682fa2a8"
+            ]
+        ]
+    },
+    {
+        "id": "45331e502f48629d",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Print last changed company",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1330f66f0c826c8e",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Get/store changed company",
+        "func": "// Might be able to merge line 3 and 6, not sure, didnt test yet if stuff breaks.\n// Store the id of the last changed contact\nmsg.id = msg.payload.results[0].companyId;\n\n// Set flow variable so we can use it later again\nglobal.set(\"currentHSCompanyId\", msg.id);\n\n// Set the C1DebID data for later\nglobal.set(\"currentHSCompanyData\", msg.payload.results[0].properties)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 660,
+        "wires": [
+            [
+                "00152fa9ccf8570e",
+                "c872901c25b1a9a9"
+            ]
+        ],
+        "info": "Store the ID and C1DebID of the changed HubSpot contact for later use."
+    },
+    {
+        "id": "00152fa9ccf8570e",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Print ID of last changed company",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "id",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "c872901c25b1a9a9",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Check When Company Was Modified",
+        "func": "// This function checks if the change happened in the past 10seconds,\n// if not, the flow is cancled to save on useless API calls.\n// While this is not perfect and changes will most likely be\n// done multible times it does help a lot.\n\n// Get the time that the contact was modified (unix)\nvar inputTime = msg.payload.results[0].properties.hs_lastmodifieddate.timestamp;\n//node.warn(\"Input Time: \" + inputTime);\n\n// Get the current Unix time in milliseconds\nvar currentUnixTime = new Date().getTime();\n//node.warn(\"Current Unix Time: \" + currentUnixTime);\n\n// Define the time threshold for 1 minutes in milliseconds\nvar timeThreshold = 1 * 10 * 1000;\n\n// Check if the input time is within the threshold\nmsg.isWithinTime = (currentUnixTime - inputTime) <= timeThreshold;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 660,
+        "wires": [
+            [
+                "1dfda1712e88adb0"
+            ]
+        ],
+        "info": "This function checks if the change happened in the past 10seconds,\r\nif not, the flow is cancled to save on useless API calls.\r\nWhile this is not perfect and changes will most likely be\r\ndone multible times it does help a lot"
+    },
+    {
+        "id": "1dfda1712e88adb0",
+        "type": "switch",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Happened past 10sec?",
+        "property": "isWithinTime",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1550,
+        "y": 660,
+        "wires": [
+            [
+                "37867689e7248c83"
+            ]
+        ]
+    },
+    {
+        "id": "6cda659cbf856ae5",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Sebd Check For New Company (Company)",
+        "mode": "link",
+        "links": [
+            "6e3d086551e23a12"
+        ],
+        "x": 2015,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "37867689e7248c83",
+        "type": "change",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fromCompanyTrigger",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 660,
+        "wires": [
+            [
+                "6cda659cbf856ae5",
+                "3da5661f5be4906f"
+            ]
+        ]
+    },
+    {
+        "id": "29d9d4a990e22648",
+        "type": "change",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fromCompanyTrigger",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 840,
+        "wires": [
+            [
+                "45df12efb87d454b"
+            ]
+        ]
+    },
+    {
+        "id": "8a190748682fa2a8",
+        "type": "switch",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Has c1DebID?",
+        "property": "payload.results[0].properties",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "c1debid",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 660,
+        "wires": [
+            [
+                "1330f66f0c826c8e"
+            ]
+        ]
+    },
+    {
+        "id": "ebb607ad30bbbff2",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "Print all recieved CRM contacts",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "4650d32073a400f8",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 980,
+        "wires": [
+            [
+                "a134d7084df4968b"
+            ]
+        ]
+    },
+    {
+        "id": "9bdd032e44d5da67",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Send Check if CRM contact exists",
+        "mode": "link",
+        "links": [
+            "81de7715baef5f4f"
+        ],
+        "x": 1885,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "470a0f29a5a2fd88",
+        "type": "comment",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "CRM↑ FreshDesk ↓",
+        "info": "",
+        "x": 1730,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "81de7715baef5f4f",
+        "type": "link in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "Recieve Check if CRM contact exists",
+        "links": [
+            "9bdd032e44d5da67"
+        ],
+        "x": 295,
+        "y": 1020,
+        "wires": [
+            [
+                "a134d7084df4968b"
+            ]
+        ]
+    },
+    {
+        "id": "a134d7084df4968b",
+        "type": "subflow:7184ca1117723035",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "",
+        "x": 440,
+        "y": 1020,
+        "wires": [
+            [
+                "ebb607ad30bbbff2",
+                "54f47a5afd1432d5"
+            ]
+        ]
+    },
+    {
+        "id": "54f47a5afd1432d5",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "Store all current CRM contact emails",
+        "func": "// In this function we store all the CRM contact emials\n// In an array \"[email], [email]\" to perform a check if \n// The incomming contact already exists in CRM\n\n// Store the company data we got from the previous node\nconst contacts = msg.payload;\n//node.log(contacts);\n\n//Initialise an empty array\nmsg.crmContactEmails = msg.crmContactEmails || [];\n\n// Loop over all the contacts we got and store the name and UNID in the array\ncontacts.forEach(function(element) \n{\n    msg.crmContactEmails.push([element.PRIMARY_EMAIL]);\n});\n\nmsg.currentHSContactId = global.get(\"currentHSContactId\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1020,
+        "wires": [
+            [
+                "6b3ee62b11a7304b",
+                "087b4da37ffaedcd"
+            ]
+        ],
+        "info": "In this function we store all the Freshdesk contact names with a ID\r\nIn a 2D array \"[[email], [id]], [[email], [id]]\""
+    },
+    {
+        "id": "6b3ee62b11a7304b",
+        "type": "debug",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "Print Emails",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "crmContactEmails",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "3da5661f5be4906f",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Send Checl if CRM Company exists",
+        "mode": "link",
+        "links": [
+            "810afc600d13c504"
+        ],
+        "x": 2015,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c5381b275eb5cd94",
+        "type": "comment",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "CRM↑ FreshDesk ↓",
+        "info": "",
+        "x": 1790,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "715c2890e1210bbd",
+        "type": "hubspot-contact-get-by-id",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "account": "964a3f5b26114437",
+        "name": "Get Hubspot Contact by Id",
+        "inputId": "id",
+        "associations": "company",
+        "properties": "firstname, lastname, email, phone, jobtitle, postalcode",
+        "output": "payload",
+        "x": 860,
+        "y": 500,
+        "wires": [
+            [
+                "d5560f560083b928",
+                "fd89607a71e350a5"
+            ]
+        ]
+    },
+    {
+        "id": "fd89607a71e350a5",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Store recieved contact data",
+        "func": "// Save the contact data from the \n// updated/created HS user\n// so we can use it later when we continue the \n// creation of the contact\n\nglobal.set(\"HScontactData\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 500,
+        "wires": [
+            [
+                "329dee5b76c08605"
+            ]
+        ],
+        "info": "Save the contact data from the \r\nupdated/created HS user\r\nso we can use it later when we continue the \r\ncreation of the contact"
+    },
+    {
+        "id": "b650cce502a2360f",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Set ID",
+        "func": "// Set the id to msg.id because stupid hubspot node can't handle arrays\n\nmsg.id = msg.payload.contacts[0].vid;\nglobal.set(\"currentHSContactId\", msg.id);\n\n//node.warn(msg.id);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 500,
+        "wires": [
+            [
+                "715c2890e1210bbd"
+            ]
+        ]
+    },
+    {
+        "id": "c1be076be9e6e22d",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "0e9d0bb5fd041acd",
+        "name": "Manual Inject",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 880,
+        "wires": [
+            [
+                "d8974d991ff92f43"
+            ]
+        ]
+    },
+    {
+        "id": "087b4da37ffaedcd",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "Check if contact exists in CRM",
+        "func": "const currentHSContact = global.get(\"HScontactData\").properties.email;\nmsg.exists = false;\n\nmsg.crmContactEmails.forEach(function(email) \n{\n    if(email == currentHSContact)\n    {\n        msg.exists = true;\n        //node.warn(\"match in CRM contacts\");\n    }\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 1020,
+        "wires": [
+            [
+                "e0eb738162c2e485"
+            ]
+        ]
+    },
+    {
+        "id": "e0eb738162c2e485",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "86164ff46381846b",
+        "name": "Send Create CRM Contact",
+        "mode": "link",
+        "links": [
+            "4bd86dcea58ceee1"
+        ],
+        "x": 1265,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "65b6609470d81866",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Start Integration",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 220,
+        "wires": [
+            [
+                "659e215ca6b3e905"
+            ]
+        ]
+    },
+    {
+        "id": "2ea8e9a63cee97eb",
+        "type": "link in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "3a2cea1e48cb42ae",
+        "name": "Start contact change detection",
+        "links": [
+            "1c2c9a03dd22d39c"
+        ],
+        "x": 275,
+        "y": 500,
+        "wires": [
+            [
+                "026104ab77d82b9d"
+            ]
+        ]
+    },
+    {
+        "id": "f381d31175a397df",
+        "type": "link in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "c6e13c8b6262ebef",
+        "name": "Start company change detection",
+        "links": [
+            "1c2c9a03dd22d39c"
+        ],
+        "x": 275,
+        "y": 660,
+        "wires": [
+            [
+                "5359a08dc9a86270"
+            ]
+        ]
+    },
+    {
+        "id": "1c2c9a03dd22d39c",
+        "type": "link out",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Start intergration",
+        "mode": "link",
+        "links": [
+            "2ea8e9a63cee97eb",
+            "f381d31175a397df",
+            "fb3cefae1205982f"
+        ],
+        "x": 925,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7e43e72288f65f17",
+        "type": "delay",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2040,
+        "y": 220,
+        "wires": [
+            [
+                "1c2c9a03dd22d39c"
+            ]
+        ]
+    },
+    {
+        "id": "fb3cefae1205982f",
+        "type": "link in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Wait before checking again",
+        "links": [
+            "1c2c9a03dd22d39c"
+        ],
+        "x": 995,
+        "y": 220,
+        "wires": [
+            [
+                "adc7ec1a811c53dd"
+            ]
+        ]
+    },
+    {
+        "id": "659e215ca6b3e905",
+        "type": "change",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "continue",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "06b50d082682ae93"
+            ]
+        ]
+    },
+    {
+        "id": "ebbbe69332452e65",
+        "type": "switch",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "continue?",
+        "property": "continue",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1880,
+        "y": 220,
+        "wires": [
+            [
+                "5050b0d4e2f34a01"
+            ],
+            [
+                "7e43e72288f65f17"
+            ]
+        ]
+    },
+    {
+        "id": "d859d28236c9b8f6",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Stop integation",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "8217ad32e4e36165"
+            ]
+        ]
+    },
+    {
+        "id": "8217ad32e4e36165",
+        "type": "change",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "continue",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "0fd7d8657cf1c203"
+            ]
+        ]
+    },
+    {
+        "id": "0fd7d8657cf1c203",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Warn Status",
+        "func": "node.warn(\"Stopping intergration! !!Any syncs running will be completed\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "info": "Warn in the console that the integration has stopped."
+    },
+    {
+        "id": "06b50d082682ae93",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Warn Status",
+        "func": "node.warn(\"Starting intergration!\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "1c2c9a03dd22d39c"
+            ]
+        ],
+        "info": "Warn in the console that the integration has started."
+    },
+    {
+        "id": "5050b0d4e2f34a01",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Warn Status",
+        "func": "node.warn(\"Stopped intergration!\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2050,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1f67ec671b78d74",
+        "type": "http in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "",
+        "url": "/startintegration",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "659e215ca6b3e905",
+                "e09cd295d853401c"
+            ]
+        ]
+    },
+    {
+        "id": "21411a1bfe632552",
+        "type": "http response",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Send response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e09cd295d853401c",
+        "type": "template",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Set response message",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Integration started!",
+        "output": "str",
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "21411a1bfe632552"
+            ]
+        ]
+    },
+    {
+        "id": "5dfa824bd5f7e692",
+        "type": "http in",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "",
+        "url": "/stopintegration",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "392e72676495c5b7",
+                "8217ad32e4e36165"
+            ]
+        ]
+    },
+    {
+        "id": "e25df53fae078de5",
+        "type": "http response",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Send response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 740,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "392e72676495c5b7",
+        "type": "template",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Set response message",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Stopping integration! !!Any syncs running will be completed",
+        "output": "str",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "e25df53fae078de5"
+            ]
+        ]
+    },
+    {
+        "id": "84229d6066291f43",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Check if in time",
+        "func": "// Get the current date and time\nvar now = new Date();\n\n// Extract the current hour from the date object\nvar currentHour = now.getHours();\n\n// Check if the current hour is between the defined start and end time\nif (currentHour >= msg.startHour && currentHour < msg.endHour) \n{\n    // Set the boolean value to true if the current time is between 8 AM and 6 PM\n    msg.proceed = true;\n} \nelse \n{\n    // Set the boolean value to false otherwise\n    msg.proceed = false;\n}\n\n// Return the message object with the updated payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 180,
+        "wires": [
+            [
+                "0a319c8f3c5f1502",
+                "265d9e853f7ce53b"
+            ]
+        ]
+    },
+    {
+        "id": "adc7ec1a811c53dd",
+        "type": "change",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Set start and end time (24h)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "startHour",
+                "pt": "msg",
+                "to": "8",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "endHour",
+                "pt": "msg",
+                "to": "18",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "useTimer",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 220,
+        "wires": [
+            [
+                "e14d5f2aa17ad3cb"
+            ]
+        ],
+        "info": "Here you can set a time to run the intergration.\r\nWe can input the start and end hour in a 24h format.\r\nSo 8am will be the value 8 and 6pm will be the value 18.\r\n\r\nThis is usefull to save on API calls at night when nothing will change. There is a limit of API calls we can make. Limit will most likely not be reached. But with a small delay and a lot of changes it might. So keep an eye out on the amount of API calls on the Hubspot website. \r\n\r\n# Warning\r\nIf there are any changes in the time its not on these will most likely be missed.\r\nThe intergration picks only the last change.\r\n\r\nSo if only one record is changed it will be fine and it will be ran as soon as it starts.\r\nIf there are more the non last ones will be lost.\r\n\r\n"
+    },
+    {
+        "id": "29227183e71d090e",
+        "type": "comment",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Set start/and time and usetimer? here.",
+        "info": "",
+        "x": 1190,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e14d5f2aa17ad3cb",
+        "type": "switch",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Use timer?",
+        "property": "useTimer",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1370,
+        "y": 220,
+        "wires": [
+            [
+                "84229d6066291f43"
+            ],
+            [
+                "ebbbe69332452e65"
+            ]
+        ]
+    },
+    {
+        "id": "0a319c8f3c5f1502",
+        "type": "switch",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Is in time?",
+        "property": "proceed",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1710,
+        "y": 180,
+        "wires": [
+            [
+                "ebbbe69332452e65"
+            ]
+        ]
+    },
+    {
+        "id": "5fafc9fdd8e33337",
+        "type": "inject",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 930,
+        "y": 160,
+        "wires": [
+            [
+                "adc7ec1a811c53dd"
+            ]
+        ]
+    },
+    {
+        "id": "265d9e853f7ce53b",
+        "type": "function",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "Warn if its in time",
+        "func": "const message = msg.proceed ? \"Is within set time \" : \"Is not within set time\";\n\nnode.warn(message);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1730,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0288ce20af4c69b",
+        "type": "comment",
+        "z": "fcd3b10f5c08f9ab",
+        "g": "d121a343653de8c1",
+        "name": "↑Delay between checks↑",
+        "info": "",
+        "x": 2050,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d33fb76fff186265",
+        "type": "inject",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Manual inject with ID",
+        "props": [
+            {
+                "p": "id",
+                "v": "9106399710",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "8fd01f8217dc3b2e"
+            ]
+        ]
+    },
+    {
+        "id": "2bf4746136a2da66",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Print freshdesk response",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e2fa5e55e26099f2",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Data Converter",
+        "func": "// In this function we prepare the data for a company creation\n// with the data we got from Hubspot\n\n// Store the data we got\nconst inputJson = global.get(\"currentHSCompanyData\");\n\n// Prepare the payload for company creation\nconst payload = {\n    \"name\": inputJson.name.value,\n    \"domains\": [inputJson.domain.value],\n    \"custom_fields\": {\n        \"c1debid\": inputJson.c1debid.value\n    }\n};\n\n///Add description if it exists\nif(inputJson.hasOwnProperty(\"description\"))\n{\n    payload.description = inputJson.description.value;\n}\n\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 520,
+        "wires": [
+            [
+                "aeae6682fe5aa621",
+                "38154e8b9d77c14e"
+            ]
+        ]
+    },
+    {
+        "id": "aeae6682fe5aa621",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Print converted company",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "97026bd929f579de",
+        "type": "freshdesk-create-company",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "inputData": "payload",
+        "x": 1180,
+        "y": 440,
+        "wires": [
+            [
+                "e33b8004192a07de",
+                "7a4d50c6388989fd"
+            ]
+        ]
+    },
+    {
+        "id": "41f97b1479ae25c0",
+        "type": "freshdesk-update-company-by-id",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "companyId": "id",
+        "inputData": "payload",
+        "x": 1480,
+        "y": 520,
+        "wires": [
+            [
+                "ee9911909bcfb3bc"
+            ]
+        ]
+    },
+    {
+        "id": "689b60b7e9f28b27",
+        "type": "link in",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Recieve Check For New Company",
+        "links": [
+            "45df12efb87d454b",
+            "94e6b9c17f1c2bc6"
+        ],
+        "x": 225,
+        "y": 200,
+        "wires": [
+            [
+                "418e39387a0a9826"
+            ]
+        ]
+    },
+    {
+        "id": "418e39387a0a9826",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Store company ID",
+        "func": "// Set msg.id to empty so the \"Get All Freshdesk companies\"\n// wont have an id put in, and returns all companies.\nmsg.id = \"\";\n\n// Check if msg.payload has the 'associations' property of Hubspot \nif (global.get(\"HScontactData\").hasOwnProperty(\"associations\")) \n{\n    // Set 'currentCompanyId' if the 'associations' property exists\n    global.set(\"currentHSCompanyId\", global.get(\"HScontactData\").associations.companies.results[0].id);\n    msg.hasHSCompany = true;\n} \nelse \n{\n    node.warn(\"'associations' property was not found in contact, skipping the check if the company exists...\");\n    msg.hasHSCompany = false;\n}\n\n//node.warn(msg.hasHSCompany);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "a19eb50b177544d1"
+            ]
+        ],
+        "info": "Checks if the recieved contact has a assiciated company.\r\nIf it does we store the ID of that company."
+    },
+    {
+        "id": "d9f2beadbb25894d",
+        "type": "freshdesk-company-by-id",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Get All Freshdesk Companies",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "companyId": "id",
+        "x": 820,
+        "y": 180,
+        "wires": [
+            [
+                "538540e02509be2b",
+                "f62425b08e98134a"
+            ]
+        ]
+    },
+    {
+        "id": "538540e02509be2b",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Store all current FD company names wiht ID",
+        "func": "// In this function we store all the Freshdesk company names with their ID\n// In a 2D array \"[[c1DebID], [id]], [[c1DebID], [id]]\"\n\n// Store the company data we got from the previous node\nconst allFDcompanies = msg.payload;\n\n//Initialise an empty array\nmsg.fdCompanyNamesIDs = msg.fdCompanyNamesIDs || [];\n\n// Loop over all the companies we got, check if they have an c1DebID,\n// and store the c1DebID and ID in the array\nallFDcompanies.forEach(function(company) \n{\n    if (company.custom_fields.c1debid != null)\n    {\n        msg.fdCompanyNamesIDs.push([company.custom_fields.c1debid, company.id]);\n    }\n});\n\n// Set back the HubSpot compant id so we can get that company in the next node\nmsg.currentHSCompanyId = global.get(\"currentHSCompanyId\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 180,
+        "wires": [
+            [
+                "2054d3b91d7d9002",
+                "671f38527755af06"
+            ]
+        ]
+    },
+    {
+        "id": "23b91d4ad547dc15",
+        "type": "inject",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Manual inject",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "418e39387a0a9826"
+            ]
+        ]
+    },
+    {
+        "id": "671f38527755af06",
+        "type": "hubspot-company-get-by-id",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "account": "964a3f5b26114437",
+        "name": "Get Hubspot Company by Id",
+        "inputId": "currentHSCompanyId",
+        "associations": "",
+        "properties": "c1debid",
+        "output": "payload",
+        "x": 1480,
+        "y": 180,
+        "wires": [
+            [
+                "c493d807830179fe"
+            ]
+        ]
+    },
+    {
+        "id": "c493d807830179fe",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Check if company exists in FD",
+        "func": "// In this function we check if the Hubspot company exist in Freshdesk. \n// If it does we continue with contact creation with the ID of that company\n// If it doesn't we create a new company\n// We use the c1DebID for the check\n\nconst currentHSCompany = msg.payload.properties.c1debid;\n\nglobal.set(\"companyExists\", false);\nmsg.exists = false;\n\n// Loop over all the FD companies\nfor (let i = 0; i < msg.fdCompanyNamesIDs.length; i++) \n{\n    // Temp store the name\n    const company = msg.fdCompanyNamesIDs[i][0];\n\n    // Check if the company is the same as the Hubspot \n    // company assiciated with the contact we want to create\n    if(company == currentHSCompany)\n    {\n        global.set(\"companyExists\", true);\n        msg.exists = true;\n        global.set(\"currentCompanyId\", msg.fdCompanyNamesIDs[i][1]);\n        //node.warn(global.get(\"currentCompanyId\"));\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 180,
+        "wires": [
+            [
+                "df83e9084238a982"
+            ]
+        ]
+    },
+    {
+        "id": "df83e9084238a982",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Company Exists?",
+        "property": "exists",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2010,
+        "y": 180,
+        "wires": [
+            [
+                "8aee60c6c83d1d13"
+            ],
+            [
+                "75cdb3baea0b30fa"
+            ]
+        ]
+    },
+    {
+        "id": "04cceb64d59c117b",
+        "type": "link in",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Recieve Create New Company",
+        "links": [
+            "ff9edf87fe5e2bf7"
+        ],
+        "x": 225,
+        "y": 480,
+        "wires": [
+            [
+                "acb470b2afb0bd22"
+            ]
+        ]
+    },
+    {
+        "id": "ff9edf87fe5e2bf7",
+        "type": "link out",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Send Create New Company",
+        "mode": "link",
+        "links": [
+            "04cceb64d59c117b",
+            "822f68cf43996439"
+        ],
+        "x": 2705,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "48c27affb691b1ce",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Created By Contact",
+        "property": "createdByContactUpdate",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1610,
+        "y": 440,
+        "wires": [
+            [
+                "63421acddd9b2f63"
+            ]
+        ]
+    },
+    {
+        "id": "63421acddd9b2f63",
+        "type": "link out",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Send proceed contact creation",
+        "mode": "link",
+        "links": [
+            "29b933ad61e88801"
+        ],
+        "x": 2425,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e33b8004192a07de",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Set variables",
+        "func": "global.set(\"currentCompanyId\", msg.payload.id);\nglobal.set(\"companyExists\", true);\n\nmsg.createdByContactUpdate = flow.get(\"createdByContactUpdate\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 480,
+        "wires": [
+            [
+                "48c27affb691b1ce",
+                "2bf4746136a2da66"
+            ]
+        ]
+    },
+    {
+        "id": "2054d3b91d7d9002",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Print formatted FS companies with ID",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "fdCompanyNamesIDs",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e06cbaa73c1e4f82",
+        "type": "inject",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Manual inject",
+        "props": [
+            {
+                "p": "is",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "d9f2beadbb25894d"
+            ]
+        ]
+    },
+    {
+        "id": "a19eb50b177544d1",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Has HS Company?",
+        "property": "hasHSCompany",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "d9f2beadbb25894d"
+            ],
+            [
+                "63421acddd9b2f63"
+            ]
+        ]
+    },
+    {
+        "id": "6e3d086551e23a12",
+        "type": "link in",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Recieve Check For New Company (Company)",
+        "links": [
+            "6cda659cbf856ae5"
+        ],
+        "x": 585,
+        "y": 160,
+        "wires": [
+            [
+                "d9f2beadbb25894d"
+            ]
+        ]
+    },
+    {
+        "id": "25d29953323a1465",
+        "type": "comment",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Create ^  Update ↓",
+        "info": "",
+        "x": 2010,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "75cdb3baea0b30fa",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "From Company Trigger",
+        "property": "fromCompanyTrigger",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2250,
+        "y": 200,
+        "wires": [
+            [
+                "8e701183f8c2408b"
+            ],
+            [
+                "63421acddd9b2f63"
+            ]
+        ]
+    },
+    {
+        "id": "8e701183f8c2408b",
+        "type": "change",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "companyOperation",
+                "pt": "global",
+                "to": "update",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2520,
+        "y": 180,
+        "wires": [
+            [
+                "ff9edf87fe5e2bf7"
+            ]
+        ]
+    },
+    {
+        "id": "8aee60c6c83d1d13",
+        "type": "change",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "companyOperation",
+                "pt": "global",
+                "to": "create",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2520,
+        "y": 140,
+        "wires": [
+            [
+                "ff9edf87fe5e2bf7"
+            ]
+        ]
+    },
+    {
+        "id": "38154e8b9d77c14e",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Opration",
+        "property": "companyOperation",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "create",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 960,
+        "y": 460,
+        "wires": [
+            [
+                "97026bd929f579de"
+            ],
+            [
+                "bddf7bdbfc616df8"
+            ]
+        ]
+    },
+    {
+        "id": "acb470b2afb0bd22",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "From Company Trigger?",
+        "property": "fromCompanyTrigger",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 480,
+        "wires": [
+            [
+                "bec245d66186aeed"
+            ],
+            [
+                "e2fa5e55e26099f2"
+            ]
+        ]
+    },
+    {
+        "id": "bddf7bdbfc616df8",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Set Company ID back",
+        "func": "// We do this so we can get the Hubspot Company\nmsg.id = global.get(\"currentCompanyId\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            [
+                "41f97b1479ae25c0"
+            ]
+        ]
+    },
+    {
+        "id": "ee9911909bcfb3bc",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Debug message",
+        "func": "node.log(\"Updated Freshdesk contact\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 520,
+        "wires": [
+            [
+                "89e0c2b377b79678"
+            ]
+        ]
+    },
+    {
+        "id": "810afc600d13c504",
+        "type": "link in",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "Recieve Check if CRM Company exists",
+        "links": [
+            "3da5661f5be4906f",
+            "df81808c7ea4c10a"
+        ],
+        "x": 225,
+        "y": 680,
+        "wires": [
+            [
+                "382fbe5421645860"
+            ]
+        ]
+    },
+    {
+        "id": "382fbe5421645860",
+        "type": "subflow:092a7fe5625209ad",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "",
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "c35fb8316a703698",
+                "645a8cdf735bb776"
+            ]
+        ],
+        "info": "Makes a call to the Glovia db and gets all the C1Deb id's from the customers table"
+    },
+    {
+        "id": "c35fb8316a703698",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "Print all CRM Companies C1DebID",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2caa18e2f8702b24",
+        "type": "inject",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "Manual inject",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "382fbe5421645860"
+            ]
+        ]
+    },
+    {
+        "id": "645a8cdf735bb776",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "Check if company exists in CRM",
+        "func": "// In this function we check if the Hubspot company exist in the CRM database. \n// If it does we continue with contact creation with the ID of that company\n// If it doesn't we create a new company\n// We use the c1DebID for the check\n\nconst currentHSCompany = global.get(\"currentHSCompanyData\").c1debid.value;\n\nmsg.exists = false;\n\n// Print length of array\n// node.warn(msg.payload.length);\n\n// Loop over all the CRM companies\nfor (let i = 0; i < msg.payload.length; i++) \n{\n    // Temp store the C1DebID\n    const company = msg.payload[i].DUNS;\n    // Check if the company is the same as the Hubspot \n    // company assiciated with the contact we want to create\n    if(company == currentHSCompany)\n    {\n        msg.exists = true;\n        global.set(\"currentCompanyId\", company);\n        //node.warn(global.get(\"currentCompanyId\"));\n        break;\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 680,
+        "wires": [
+            [
+                "b16718dcc1a03e03",
+                "48a3a25df1c09ae3"
+            ]
+        ]
+    },
+    {
+        "id": "b16718dcc1a03e03",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "Company exists?",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "exists",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "48a3a25df1c09ae3",
+        "type": "link out",
+        "z": "8c716b96d53fcc12",
+        "g": "ccc91400f7d7db5e",
+        "name": "Send Create/Update CRM Company",
+        "mode": "link",
+        "links": [
+            "9e2323ce4339e547"
+        ],
+        "x": 1065,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5a6cbef757d3bdc4",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Data Converter",
+        "func": "// In this function we prepare the data for a company creation\n// with the data we got from Hubspot\n\n// Store the data we got\nconst inputJson = global.get(\"currentHSCompanyData\");\n\nvar shortName = ' ';\nif (inputJson.hasOwnProperty(\"name\")) {\n  // Make a short version of the company name\n  // by picking the first word and giving it a max lenhth of 10\n  const inputName = inputJson.name.value;\n  const spaceIndex = inputName.indexOf(' ');\n\n  shortName = spaceIndex !== -1\n    ? inputName.substring(0, Math.min(spaceIndex, 10))\n    : inputName.substring(0, 10);\n}\n\nconst address = inputJson.hasOwnProperty(\"address\") ? inputJson.address.value : ' ';\nconst city    = inputJson.hasOwnProperty(\"city\")    ? inputJson.city.value    : ' ';\nconst name    = inputJson.hasOwnProperty(\"name\")    ? inputJson.name.value    : ' ';\nconst zip     = inputJson.hasOwnProperty(\"zip\")     ? inputJson.zip.value     : ' ';\nconst c1debid = inputJson.hasOwnProperty(\"c1debid\") ? inputJson.c1debid.value : ' ';\nflow.set(\"c1debid\", c1debid);\n\n// Get the current date and time in the required format (DD-MON-YY)\nconst currentDate = new Date();\nconst months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];\nconst formattedDate = `${currentDate.getDate()}-${months[currentDate.getMonth()]}-${currentDate.getFullYear().toString().slice(-2)}`;\n\nconst jobTitle = inputJson.hasOwnProperty(\"jobtitle\") ? inputJson.jobtitle : ' ';\n\nmsg.payload = [\n  // VALUE                      COLUMN IN DB        COUNT\n  shortName,                  // CUSTOMER,        // 1\n  ' ',                        // CUS_LOC,         // 2\n  address,                    // ADDR1,           // 3\n  ' ',                        // ADDR2,           // 4\n  ' ',                        // ADDR3,           // 5\n  ' ',                        // ADDR4,           // 6\n  ' ',                        // ADDR5,           // 7\n  ' ',                        // ADDR6,           // 8\n  city,                       // CITY,            // 9\n  msg.crmCountry,             // COUNTRY,         // 10\n  name,                       // NAME,            // 11\n  zip,                        // ZIP,             // 12\n  ' ',                        // STATE,           // 13\n  ' ',                        // NAME2,           // 14\n  c1debid,                    // DUNS,            // 15\n  name,                       // SORT_NAME,       // 16\n  ' ',                        // DELETED,         // 17\n  ' ',                        // EDI_CODE,        // 18\n  ' ',                        // UNID,            // 19\n  formattedDate,              // MOD_DATE,        // 20\n  ' ',                        // VAT_REG,         // 21\n  ' ',                        // EMAIL,           // 22\n  ' ',                        // BB_ID,           // 23\n  ' ',                        // USER_ALPHA1,     // 24\n  ' ',                        // USER_ALPHA2,     // 25\n  ' ',                        // USER_ALPHA3,     // 26\n  0,                          // USER_NUM1,       // 27\n  0,                          // USER_NUM2,       // 28\n  0,                          // USER_NUM3,       // 29\n  ' '                         // USER_DATE,       // 30\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 900,
+        "wires": [
+            [
+                "f1b57185a1125314",
+                "bcb0e01b1d1f0a55"
+            ]
+        ]
+    },
+    {
+        "id": "bcb0e01b1d1f0a55",
+        "type": "switch",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Exists?",
+        "property": "exists",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 780,
+        "y": 900,
+        "wires": [
+            [
+                "c251c2dcac3ac515"
+            ],
+            [
+                "34244e495c8a9bc8"
+            ]
+        ]
+    },
+    {
+        "id": "9e2323ce4339e547",
+        "type": "link in",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Recieve Create/Update CRM Company",
+        "links": [
+            "48a3a25df1c09ae3"
+        ],
+        "x": 225,
+        "y": 900,
+        "wires": [
+            [
+                "d948bedcc253dc8c"
+            ]
+        ]
+    },
+    {
+        "id": "c251c2dcac3ac515",
+        "type": "subflow:2dfd8b2d52f7af9a",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "",
+        "x": 1010,
+        "y": 880,
+        "wires": [
+            [
+                "464f977f03eb9472"
+            ]
+        ]
+    },
+    {
+        "id": "3e5d335ee2180c8e",
+        "type": "inject",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Manual inject",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 770,
+        "y": 940,
+        "wires": [
+            [
+                "c251c2dcac3ac515"
+            ]
+        ]
+    },
+    {
+        "id": "d948bedcc253dc8c",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Set Country",
+        "func": "// Store the data we got\nconst inputJson = msg.payload;\n\n// Store country of the company\n// Bring it to lower case too to avoid casing errors\nconst hsCountry = global.get(\"currentHSCompanyData\").country.value.toLowerCase();\n\nswitch (hsCountry) {\n    case \"united states\" || \"us\" || \"usa\":\n        msg.crmCountry = \"US\"\n        break;\n    case \"netherlands\" || \"nl\" || \"the netherlands\":\n        msg.crmCountry = \"NL\"\n        break;\n    case \"belgium\" || \"be\" || \"belgie\":\n        msg.crmCountry = \"BE\"\n        break;\n    case \"czechia\" || \"cz\":\n        msg.crmCountry = \"CZ\"\n        break;\n    case \"germany\" || \"de\" || \"Deutschland\":\n        msg.crmCountry = \"DE\"\n        break;\n    case \"egypt\" || \"eg\" || \"arab republic of egypt\":\n        msg.crmCountry = \"EG\"\n        break;\n    case \"spain\" || \"es\" || \"españa\":\n        msg.crmCountry = \"ES\"\n        break;\n    case \"france\" || \"fr\" || \"frankrijk\":\n        msg.crmCountry = \"FR\"\n        break;\n    case \"hungary\" || \"hu\" || \"hongarije\":\n        msg.crmCountry = \"HU\"\n        break;\n    case \"italy\" || \"it\":\n        msg.crmCountry = \"IT\"\n        break;\n    case \"malaysia\" || \"MY\":\n        msg.crmCountry = \"MY\"\n        break;\n    case \"saudi arabia\" || \"sa\":\n        msg.crmCountry = \"SA\"\n        break;\n    case \"united kingdom\" || \"uk\":\n        msg.crmCountry = \"UK\"\n        break;  \n    default:\n        msg.crmCountry = 'Unknown';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 900,
+        "wires": [
+            [
+                "be5dcd3cce5d2eb6",
+                "5a6cbef757d3bdc4"
+            ]
+        ],
+        "info": "Function to set the country properly"
+    },
+    {
+        "id": "be5dcd3cce5d2eb6",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Print company country",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "crmCountry",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "f1b57185a1125314",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Print converted results",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "34244e495c8a9bc8",
+        "type": "subflow:b51a3f837d8a3ea1",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "",
+        "x": 1000,
+        "y": 920,
+        "wires": [
+            [
+                "586d8a900c634dca"
+            ]
+        ]
+    },
+    {
+        "id": "f62425b08e98134a",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Print all FD companies",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e13110d845ab92e6",
+        "type": "comment",
+        "z": "8c716b96d53fcc12",
+        "g": "ed922df1934e910c",
+        "name": "Create contact link",
+        "info": "This node goes to the part where contact is created.",
+        "x": 2530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8fd01f8217dc3b2e",
+        "type": "hubspot-company-get-by-id",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "account": "964a3f5b26114437",
+        "name": "Get HD Company by id",
+        "inputId": "id",
+        "associations": "",
+        "properties": "domain, name, c1debid",
+        "output": "payload",
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "2ed92034ac44a287",
+                "100e213b8b079714"
+            ]
+        ]
+    },
+    {
+        "id": "bec245d66186aeed",
+        "type": "change",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "currentHSCompanyId",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "createdByContactUpdate",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "8fd01f8217dc3b2e"
+            ]
+        ],
+        "info": "Set id to get the company we need to create in Freshdesk\r\n\r\nWe also set a bool so we know that this company \r\nHas been created because a contact with a \r\nNon existing company has been created/updated\r\nSo we can later in the flow continue with the\r\nCreation/update of that contact."
+    },
+    {
+        "id": "2ed92034ac44a287",
+        "type": "json",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 715,
+        "y": 360,
+        "wires": [
+            [
+                "73d2cd69422dcdaf"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "73d2cd69422dcdaf",
+        "type": "json",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 765,
+        "y": 360,
+        "wires": [
+            [
+                "dfce0183cabddcad"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "dfce0183cabddcad",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Print company",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "100e213b8b079714",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Data Converter",
+        "func": "// In this function we prepare the data for company creation in Freshdesk from contact creation\n\n// Get the HubSpot data back we got at the start\nvar inputJson = msg.payload;\n\n// Prepare the payload to create the FD contact with the data from HubSpot \nmsg.payload = {\n    \"name\"    : inputJson.properties.hasOwnProperty(\"name\")    ? inputJson.properties.name   : 'none',\n    \"domains\" : [inputJson.properties.hasOwnProperty(\"domain\") ? inputJson.properties.domain : 'none',],\n    \"custom_fields\": {\n        \"c1debid\" : inputJson.properties.hasOwnProperty(\"c1debid\") ? inputJson.properties.c1debid : 'none',\n    }\n};\n\n/// Extra properties\n\n\n// Send the message\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 400,
+        "wires": [
+            [
+                "38154e8b9d77c14e",
+                "ccf2b6118e4bb4e9"
+            ]
+        ],
+        "info": "In this function we prepare the data for contact creation in Freshdesk"
+    },
+    {
+        "id": "ccf2b6118e4bb4e9",
+        "type": "debug",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Print converted company",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e3b6db95c7ca4ad4",
+        "type": "comment",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "From Contact↑ \\n From Company↓",
+        "info": "If the company needs to be created because a contact needs to be updated/created it needs to fetch the company data from a Get Company node, this data is diffrently formatted then from the data we store from the company when we check for changes, due to this we need a diffrent data converter.",
+        "x": 780,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7a4d50c6388989fd",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Set log details",
+        "func": "msg.operation = \"Created\";\nmsg.crm = \"FreshDesk\"\nmsg.object = \"company\"\nmsg.id = msg.payload.company_id;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 380,
+        "wires": [
+            [
+                "7d776e71d6814f47"
+            ]
+        ]
+    },
+    {
+        "id": "89e0c2b377b79678",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Set log details",
+        "func": "msg.operation = \"Updated\";\nmsg.crm = \"Freshdesk\"\nmsg.object = \"company\"\nmsg.id = global.get(\"currentCompanyId\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 520,
+        "wires": [
+            [
+                "7d776e71d6814f47"
+            ]
+        ]
+    },
+    {
+        "id": "7d776e71d6814f47",
+        "type": "link out",
+        "z": "8c716b96d53fcc12",
+        "g": "c15db5e3ece42e27",
+        "name": "Send write out changes 2",
+        "mode": "link",
+        "links": [
+            "47f6878f52bb62c7"
+        ],
+        "x": 2065,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "464f977f03eb9472",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Set debug message",
+        "func": "node.warn(\"Updated comapny in Glovia Database\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 880,
+        "wires": [
+            [
+                "11d73a093de43f56"
+            ]
+        ]
+    },
+    {
+        "id": "586d8a900c634dca",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Set debug message",
+        "func": "node.warn(\"Created company in Glovia Database\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 920,
+        "wires": [
+            [
+                "90454335dfebc5b7"
+            ]
+        ]
+    },
+    {
+        "id": "11d73a093de43f56",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Set log details",
+        "func": "msg.operation = \"Updated\";\nmsg.crm = \"Glovia\";\nmsg.object = \"company\";\nmsg.id = flow.get(\"c1debid\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 880,
+        "wires": [
+            [
+                "203ee916ec153cb4"
+            ]
+        ]
+    },
+    {
+        "id": "90454335dfebc5b7",
+        "type": "function",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Set log details",
+        "func": "msg.operation = \"Updated\";\nmsg.crm = \"Glovia\"\nmsg.object = \"company\"\nmsg.id = flow.get(\"c1debid\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 920,
+        "wires": [
+            [
+                "203ee916ec153cb4"
+            ]
+        ]
+    },
+    {
+        "id": "203ee916ec153cb4",
+        "type": "link out",
+        "z": "8c716b96d53fcc12",
+        "g": "ed91c2df0abfab3d",
+        "name": "Send wirte out changes 4",
+        "mode": "link",
+        "links": [
+            "47f6878f52bb62c7"
+        ],
+        "x": 1605,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "2612fc17f0e766d0",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "4a1e6759b1cc7eb1",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "id",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 380,
+        "wires": [
+            [
+                "576afb9528e58767"
+            ]
+        ]
+    },
+    {
+        "id": "576afb9528e58767",
+        "type": "freshdesk-get-contact-by-id",
+        "z": "0aa10ba13c9e880e",
+        "g": "4a1e6759b1cc7eb1",
+        "name": "Get All FD Contacts",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "contactId": "id",
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "6dc23d6ecd395538"
+            ]
+        ]
+    },
+    {
+        "id": "6dc23d6ecd395538",
+        "type": "excel",
+        "z": "0aa10ba13c9e880e",
+        "g": "4a1e6759b1cc7eb1",
+        "name": "Write to exel file",
+        "file": "C:\\Users\\xvanhunen\\Documents\\Jonas Docs\\freshdeskContacts.xlsx",
+        "x": 700,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b10b89e8cb23bde",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "4a1e6759b1cc7eb1",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "id",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "b20a2d0ba32aef8f"
+            ]
+        ]
+    },
+    {
+        "id": "e3e618aed6162578",
+        "type": "excel",
+        "z": "0aa10ba13c9e880e",
+        "g": "4a1e6759b1cc7eb1",
+        "name": "Write to exel file",
+        "file": "C:\\Users\\xvanhunen\\Documents\\Jonas Docs\\freshdeskCompanies.xlsx",
+        "x": 700,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b20a2d0ba32aef8f",
+        "type": "freshdesk-company-by-id",
+        "z": "0aa10ba13c9e880e",
+        "g": "4a1e6759b1cc7eb1",
+        "name": "Get All FD Companies",
+        "freshdesk": "ac3c09c2d8c1db8e",
+        "companyId": "id",
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "e3e618aed6162578"
+            ]
+        ]
+    },
+    {
+        "id": "b13c54c470b5ea75",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "id",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 560,
+        "wires": [
+            [
+                "02208acc61451184"
+            ]
+        ]
+    },
+    {
+        "id": "9add5abd4b6bc78c",
+        "type": "excel",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "name": "Write to exel file",
+        "file": "C:\\Users\\xvanhunen\\Documents\\Jonas Docs\\hubspotContacts.xlsx",
+        "x": 860,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10cf1e5e4243ea7f",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "id",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 620,
+        "wires": [
+            [
+                "502848c4387bf76a"
+            ]
+        ]
+    },
+    {
+        "id": "b7e92c41e76cb185",
+        "type": "excel",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "name": "Write to exel file",
+        "file": "C:\\Users\\xvanhunen\\Documents\\Jonas Docs\\hubspotCompanies.xlsx",
+        "x": 860,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02208acc61451184",
+        "type": "hubspot-api-request",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "account": "964a3f5b26114437",
+        "method": "GET",
+        "path": "/crm/v3/objects/contacts/",
+        "body": "nothing",
+        "output": "payload",
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "c1b55578460eef5a"
+            ]
+        ]
+    },
+    {
+        "id": "502848c4387bf76a",
+        "type": "hubspot-api-request",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "account": "964a3f5b26114437",
+        "method": "GET",
+        "path": "/crm/v3/objects/companies/",
+        "body": "nothing",
+        "output": "payload",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "624a16c3af02081e"
+            ]
+        ]
+    },
+    {
+        "id": "c1b55578460eef5a",
+        "type": "function",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "name": "Flatten Properties",
+        "func": "// This function takes out all the keys in the properties and brings it to the top level\n// Like this we have a nice flat json so we can write it better to an exel sheet\n\nvar inputArray = msg.payload.results; // Assuming the input data is in msg.payload\n\nfunction flattenProperties(arr) \n{\n  const result = arr.map(item => {\n    const flattened = {\n      id: item.id, // Keep the 'id' property as is\n      ...item.properties, // Spread the properties to the top level\n      ...item, // Spread other properties to the top level\n    };\n    // Remove the 'properties' key from the flattened object\n    delete flattened.properties;\n    return flattened;\n  });\n\n  return result;\n}\n\nmsg.payload = flattenProperties(inputArray);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 560,
+        "wires": [
+            [
+                "9add5abd4b6bc78c"
+            ]
+        ]
+    },
+    {
+        "id": "624a16c3af02081e",
+        "type": "function",
+        "z": "0aa10ba13c9e880e",
+        "g": "d4a00619d87fc08a",
+        "name": "Flatten Properties",
+        "func": "// This function takes out all the keys in the properties and brings it to the top level\n// Like this we have a nice flat json so we can write it better to an exel sheet\n\nvar inputArray = msg.payload.results; // Assuming the input data is in msg.payload\n\nfunction flattenProperties(arr) \n{\n  const result = arr.map(item => {\n    const flattened = {\n      id: item.id, // Keep the 'id' property as is\n      ...item.properties, // Spread the properties to the top level\n      ...item, // Spread other properties to the top level\n    };\n    // Remove the 'properties' key from the flattened object\n    delete flattened.properties;\n    return flattened;\n  });\n\n  return result;\n}\n\nmsg.payload = flattenProperties(inputArray);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 620,
+        "wires": [
+            [
+                "b7e92c41e76cb185"
+            ]
+        ]
+    },
+    {
+        "id": "0d9372422364a524",
+        "type": "file",
+        "z": "0aa10ba13c9e880e",
+        "g": "72e8fd61b865bd7b",
+        "name": "Write out data",
+        "filename": "name",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 840,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aad89775255587d7",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "72e8fd61b865bd7b",
+        "name": "Manual inject",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "8c2c14f65839d360"
+            ]
+        ]
+    },
+    {
+        "id": "8c2c14f65839d360",
+        "type": "function",
+        "z": "0aa10ba13c9e880e",
+        "g": "72e8fd61b865bd7b",
+        "name": "Name file",
+        "func": "var date = new Date();\nlet day = date.getDate();\n// Increment month by 1 because javascript uses 0 based months?? Why????\nlet month = date.getMonth() + 1;\nlet year = date.getFullYear();\n\nmsg.name = `D:\\\\${day}-${month}-${year} CRM Integration log.txt`;\nnode.warn(msg.name);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "e74939d75ffd3686"
+            ]
+        ]
+    },
+    {
+        "id": "47f6878f52bb62c7",
+        "type": "link in",
+        "z": "0aa10ba13c9e880e",
+        "g": "72e8fd61b865bd7b",
+        "name": "Recieve write out changes",
+        "links": [
+            "203ee916ec153cb4",
+            "7d776e71d6814f47",
+            "ab7dadfeef234d4d",
+            "d2238a6054af6986"
+        ],
+        "x": 265,
+        "y": 260,
+        "wires": [
+            [
+                "8c2c14f65839d360"
+            ]
+        ]
+    },
+    {
+        "id": "e74939d75ffd3686",
+        "type": "function",
+        "z": "0aa10ba13c9e880e",
+        "g": "72e8fd61b865bd7b",
+        "name": "Set data",
+        "func": "var date = new Date();\nlet day = date.getDate();\nlet month = date.getMonth() + 1;\nlet year = date.getFullYear();\nlet hours = date.getHours();\nlet min = date.getMinutes();\nlet sec = date.getSeconds();\n\n// Construct log message\n// Example: 9/1/2024 16:14:28 | Updated contact to FreshDesk with ID: 201000127499\nmsg.payload = `\n${day}/${month}/${year} ${hours}:${min}:${sec} | ${msg.operation} ${msg.object} to ${msg.crm} with ${msg.crm} ID: ${msg.id}` ;\nnode.warn(msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "0d9372422364a524"
+            ]
+        ]
+    },
+    {
+        "id": "e2f58d38a8d2f093",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "f56817fd319a6405",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "id",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "1fb452bdd5d7d65a"
+            ]
+        ]
+    },
+    {
+        "id": "8417a35c9a6961ac",
+        "type": "excel",
+        "z": "0aa10ba13c9e880e",
+        "g": "f56817fd319a6405",
+        "name": "Write to exel file",
+        "file": "C:\\Users\\xvanhunen\\Documents\\Jonas Docs\\gloviaContacts.xlsx",
+        "x": 760,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a8eb7db4b52f8ab",
+        "type": "inject",
+        "z": "0aa10ba13c9e880e",
+        "g": "f56817fd319a6405",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "id",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 800,
+        "wires": [
+            [
+                "7f7db4124ef413e9"
+            ]
+        ]
+    },
+    {
+        "id": "3bf630ae8c761899",
+        "type": "excel",
+        "z": "0aa10ba13c9e880e",
+        "g": "f56817fd319a6405",
+        "name": "Write to exel file",
+        "file": "C:\\Users\\xvanhunen\\Documents\\Jonas Docs\\gloviaCompanies.xlsx",
+        "x": 760,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1fb452bdd5d7d65a",
+        "type": "subflow:7184ca1117723035",
+        "z": "0aa10ba13c9e880e",
+        "g": "f56817fd319a6405",
+        "name": "",
+        "x": 460,
+        "y": 740,
+        "wires": [
+            [
+                "8417a35c9a6961ac"
+            ]
+        ]
+    },
+    {
+        "id": "7f7db4124ef413e9",
+        "type": "subflow:092a7fe5625209ad",
+        "z": "0aa10ba13c9e880e",
+        "g": "f56817fd319a6405",
+        "name": "",
+        "x": 500,
+        "y": 800,
+        "wires": [
+            [
+                "3bf630ae8c761899"
+            ]
+        ]
+    },
+    {
+        "id": "1699a04657fb5ed9",
+        "type": "comment",
+        "z": "0aa10ba13c9e880e",
+        "name": "!! EDIT PATH IN WRITE TO EXEL FILE !!",
+        "info": "Currently to local file system that only works on this laptop",
+        "x": 500,
+        "y": 880,
+        "wires": []
+    }
+]
