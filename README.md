@@ -26,7 +26,7 @@ Now select `HubspotToFreshdesk`
 
 Install the missing dependencies.
 
-PASSWORD: `intergration`
+PASSWORD: Check file I send to Arjan
 
 ## Running the project
 Make sure the flow is deployed by checking if the deploy button is gray in thr top right of the screen.
